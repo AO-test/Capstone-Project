@@ -13,8 +13,8 @@ node {
     }
     stage("Linting") {
       echo 'Linting...'
-      sh '/usr/bin/hlint blue/Dockerfile'
-      sh '/usr/bin/hlint green/Dockerfile'
+      sh '/usr/bin/hlint blue_pip/Dockerfile'
+      sh '/usr/bin/hlint green_pip/Dockerfile'
     }
     stage('Building image blue') {
 	    echo 'Building Docker image blue...'
