@@ -13,8 +13,8 @@ node {
     }
     stage("Linting") {
       echo 'Linting...'
-      sh 'hadolint blue_pip/Dockerfile'
-      sh 'hadolint green_pip/Dockerfile'
+      sh 'hadolint --ignore DL3006 blue_pip/Dockerfile'
+      sh 'hadolint --ignore DL3006 green_pip/Dockerfile'
     }
     stage('Building image blue') {
 	    echo 'Building Docker image blue...'
